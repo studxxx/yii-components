@@ -2,6 +2,7 @@
     "name": "studxxx/yii-components",
     "description": "DConfig",
     "license": "BSD-3-Clause",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "studxxx",
