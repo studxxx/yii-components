@@ -1,15 +1,15 @@
 {
-    "name": "studxxx/yii-components",
-    "description": "DConfig",
-    "license": "BSD-3-Clause",
-    "version": "0.0.1",
-    "authors": [
-        {
-            "name": "studxxx",
-            "email": "stud181177@gmail.com"
-        }
-    ],
-    "require-dev": {
-        "yiisoft/yii": ">=1.1.14"
+  "name": "studxxx/yii-components",
+  "description": "KeyStorage",
+  "license": "BSD-3-Clause",
+  "version": "0.0.2",
+  "authors": [
+    {
+      "name": "studxxx",
+      "email": "stud181177@gmail.com"
     }
+  ],
+  "require": {
+    "yiisoft/yii": ">=1.1.14"
+  }
 }
