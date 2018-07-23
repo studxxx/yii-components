@@ -1,11 +1,13 @@
 <?php
 
-class m150226_150922_config_table extends CDbMigration
+class m150226_150922_add_key_storage_table extends CDbMigration
 {
-	public function safeUp()
-	{
+    const TABLE_SCHEMA = 'key_storage';
+
+    public function safeUp()
+    {
         $this->execute(
-          "CREATE TABLE IF NOT EXISTS `config` (
+            "CREATE TABLE IF NOT EXISTS `" . self::TABLE_SCHEMA . "` (
             `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
             `param` varchar(128) NOT NULL,
             `value` text NOT NULL,
@@ -16,10 +18,10 @@ class m150226_150922_config_table extends CDbMigration
             UNIQUE KEY `param` (`param`)
           ) ENGINE=MyISAM DEFAULT CHARSET=utf8;"
         );
-	}
+    }
 
-	public function safeDown()
-	{
-        $this->dropTable('config');
-	}
+    public function safeDown()
+    {
+        $this->dropTable(self::TABLE_SCHEMA);
+    }
 }
