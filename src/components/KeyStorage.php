@@ -75,8 +75,7 @@ class KeyStorage extends CApplicationComponent
         if (empty($param['param'])) {
             return;
         }
-        $model = $this->getParam($param['param']);
-        if ($model === null) {
+        if ($model = $this->getParam($param['param'])) {
             $model = new KeyStorageItem();
         }
 
@@ -91,8 +90,7 @@ class KeyStorage extends CApplicationComponent
 
     protected function removeParameter($key)
     {
-        $model = $this->getParam($key);
-        if ($model !== null) {
+        if (!$model = $this->getParam($key)) {
             $model->delete();
         }
     }
